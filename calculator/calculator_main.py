@@ -1,5 +1,5 @@
 """ increment function"""
-class Calculatorexample:
+class Calculator:
     """ created calculator class"""
 
     result = 0
