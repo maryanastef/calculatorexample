@@ -4,18 +4,25 @@ class Calculatorexample:
 
     result = 0
     def get_result(self):
-        """ get result of calculation"""
+        """ getting result of calculation"""
         return self.result
 
-    def add_number(self, value_a):
+    def adding_numbers(self, value_x):
         """ adds number to result"""
-        self.result = self.result + value_a
+        self.result = self.result + value_x
         return self.result
-    def subtract_number(self, value_a):
+
+    def subtracting_numbers(self, value_x):
         """ subtract number from result"""
-        self.result = self.result - value_a
+        self.result = self.result - value_x
         return self.result
-    def multiply_numbers(self, value_a, value_b):
+
+    def multiplying_numbers(self, value_x, value_y):
         """ multiply two numbers and store the result"""
-        self.result = value_a * value_b
+        self.result = value_x * value_y
+        return self.result
+
+    def dividing_numbers(self, value_x, value_y):
+        """ divide two numbers and store the result"""
+        self.result = value_x / value_y
         return self.result
