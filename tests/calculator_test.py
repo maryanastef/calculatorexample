@@ -45,7 +45,5 @@ def test_calculator_dividing():
     calc = Calculator()
     # Act by calling the method to be tested
     result = calc.dividing_numbers(2,2)
-    result2 = calc.dividing_numbers(0,2)
     # Assert that the results are correct
     assert result == 1
-    assert result2 == 0, "Cannot divide by zero"

@@ -27,8 +27,7 @@ class Calculator:
 
     def dividing_numbers(self, value_x, value_y):
         """ divide two numbers and store the result"""
-        if value_y == 0:
-            self.result = "Cannot divide by zero"
-        else:
-            self.result = value_x / value_y
+        if value_y == 0 or value_x == 0:
+            raise Exception(ZeroDivisionError)
+        self.result = value_x / value_y
         return self.result
