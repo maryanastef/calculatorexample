@@ -47,6 +47,3 @@ def test_calculator_dividing():
     result = calc.dividing_numbers(2 ,2)
     # Assert that the results are correct
     assert result == 1
-
-
-
