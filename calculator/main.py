@@ -1,8 +1,11 @@
 """ increment function"""
+
+
 class Calculator:
     """ created calculator class"""
 
     result = 0
+
     def get_result(self):
         """ getting result of calculation"""
         return self.result
@@ -24,5 +27,8 @@ class Calculator:
 
     def dividing_numbers(self, value_x, value_y):
         """ divide two numbers and store the result"""
-        self.result = value_x / value_y
+        if value_y == 0:
+            self.result = "Cannot divide by zero"
+        else:
+            self.result = value_x / value_y
         return self.result
