@@ -63,9 +63,3 @@ class Calculator:
         division = Division.create(value_x, value_y)
         Calculator.add_calculation_to_history(division)
         return Calculator.get_result_of_last_calculation_added_to_history()
-    try:
-        value_x = 1
-        value_y = 0
-        print(value_x/value_y)
-    except ZeroDivisionError:
-        print("Cannot divide by zero")

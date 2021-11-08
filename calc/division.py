@@ -7,9 +7,8 @@ class Division(Calculation):
     """"Division class has one method to get the result"""
     def getResult(self):
         # referencing data contained in the instance of the object
-        try:
-            value_x = 1
-            value_y = 0
-            print(value_x / value_y)
-        except ZeroDivisionError:
-            print("Cannot divide by zero")
+        while True:
+            if self.value_y == 0 or self.value_x == 0:
+                print("Cannot divide by zero")
+            else:
+                return self.value_x / self.value_y
