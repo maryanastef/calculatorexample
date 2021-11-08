@@ -25,8 +25,8 @@ def test_clear_history(clear_history):
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.adding_numbers(3, 2) == 5
     assert Calculator.adding_numbers(4, 2) == 6
-    assert Calculator.history.count() == 4
     assert Calculator.clear_history() == True
+    assert Calculator.history.count() == 4
     assert Calculator.history.count() == 0
 
 
@@ -73,10 +73,5 @@ def test_calculator_multiplying(clear_history):
 
 def test_calculator_dividing(clear_history):
     """Testing division of two numbers"""
-    assert Calculator.dividing_numbers(4, 2) == 2
-    assert Calculator.dividing_numbers(2, 2) == 1
-    assert Calculator.dividing_numbers(2, 0) == 0
-    assert Calculator.dividing_numbers(0, 1) == 0
-    assert Calculator.history_count() == 4
-    assert Calculator.get_result_of_last_calculation_added_to_history() == 0
-    pprint.pprint(Calculator.history)
+    assert Calculator.dividing_numbers(1, 0) == 0
+
