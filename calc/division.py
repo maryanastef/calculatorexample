@@ -9,5 +9,5 @@ class Division(Calculation):
         # referencing data contained in the instance of the object
         try:
             return self.value_x / self.value_y
-        except ZeroDivisionError as err:
-            raise ZeroDivisionError from err
+        except ZeroDivisionError as error:
+            raise ZeroDivisionError from error
