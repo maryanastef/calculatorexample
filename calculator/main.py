@@ -1,8 +1,7 @@
 """ increment function"""
-
-
 class Calculator:
     """ created calculator class"""
+    history = []
 
     result = 0
 
