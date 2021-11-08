@@ -1,49 +1,30 @@
-"""calculator test"""
-
+"""Testing the Calculator"""
 from calculator.main import Calculator
+import pprint
+"""importing Calculator Class"""
 
-def test_calculator_result():
-    """testing calculator result is 0"""
-    calc = Calculator()
-    assert calc.result == 0
-
-def test_calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc = Calculator()
-    assert calc.get_result() == 0
 
 def test_calculator_adding():
     """Testing the addition"""
-    # Arrange by instantiating the calc class
-    calc = Calculator()
-    # Act by calling the method to be tested
-    calc.adding_numbers(2)
-    # Assert that the results are correct
-    assert calc.result == 2
+    assert Calculator.adding_numbers(1, 2) == 3
+    assert Calculator.adding_numbers(2, 2) == 4
+    assert Calculator.adding_numbers(3, 2) == 5
+    assert Calculator.adding_numbers(4, 2) == 6
+    assert Calculator.history_count() == 4
+    assert Calculator.get_result_of_last_calculation_added_to_history() == 6
+    pprint.pprint(Calculator.history)
+
 
 def test_calculator_subtracting():
     """Testing the subtraction"""
-    # Arrange by instantiating the calc class
-    calc = Calculator()
-    # Act by calling the method to be tested
-    calc.subtracting_numbers(2)
-    # Assert that the results are correct
-    assert calc.get_result() == -2
+    assert Calculator.subtracting_numbers(1, 2) == -1
+
 
 def test_calculator_multiplying():
     """Testing multiplication of two numbers"""
-    # Arrange by instantiating the calc class
-    calc = Calculator()
-    # Act by calling the method to be tested
-    result = calc.multiplying_numbers(2 ,2)
-    # Assert that the results are correct
-    assert result == 4
+    assert Calculator.multiplying_numbers(1, 2) == 2
+
 
 def test_calculator_dividing():
     """Testing division of two numbers"""
-    # Arrange by instantiating the calc class
-    calc = Calculator()
-    # Act by calling the method to be tested
-    result = calc.dividing_numbers(2,2)
-    # Assert that the results are correct
-    assert result == 1
+    assert Calculator.dividing_numbers(4, 2) == 2
