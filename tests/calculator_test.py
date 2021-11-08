@@ -74,4 +74,3 @@ def test_calculator_dividing(clear_history):
     assert Calculator.dividing_numbers(4, 2) == 2
     assert Calculator.dividing_numbers(1, 1) == 1
     assert Calculator.dividing_numbers(1, 0) == "Cannot divide by zero"
-
