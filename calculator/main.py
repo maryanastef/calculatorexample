@@ -37,16 +37,14 @@ class Calculator:
     def adding_numbers(value_x, value_y):
         """ adds number to result"""
         # create an addition object
-        addition = Addition.create(value_x, value_y)
-        Calculator.add_calculation_to_history(addition)
+        Calculator.add_calculation_to_history(Addition.create(value_x, value_y))
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
     def subtracting_numbers(value_x, value_y):
         """ subtract number from result"""
         # create a subtraction object
-        subtraction = Subtraction.create(value_x, value_y)
-        Calculator.add_calculation_to_history(subtraction)
+        Calculator.add_calculation_to_history(Subtraction.create(value_x, value_y))
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod

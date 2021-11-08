@@ -73,3 +73,4 @@ def test_calculator_dividing():
     assert Calculator.dividing_numbers(1, 1) == 1
     with pytest.raises(ZeroDivisionError):
         Calculator.dividing_numbers(1, 0)
+        print("Cannot divide by zero")
