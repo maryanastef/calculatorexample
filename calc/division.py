@@ -10,5 +10,6 @@ class Division(Calculation):
         while True:
             if self.value_y == 0 or self.value_x == 0:
                 print("Cannot divide by zero")
+                break
             else:
                 return self.value_x / self.value_y
