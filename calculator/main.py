@@ -2,12 +2,23 @@
 # importing the addition namespace
 from calc.addition import Addition
 from calc.subtraction import Subtraction
+from calc.multiplication import Multiplication
+""" created calculator class"""
 
 
 class Calculator:
-    """ created calculator class"""
-    history = []
     """ history is a numbered list of calculations"""
+    history = []
+
+    @staticmethod
+    def get_result_of_first_calculation_added_to_history():
+        return Calculator.history[0].getResult()
+
+    @staticmethod
+    def clear_history():
+        Calculator.history.clear()
+        return True
+
     @staticmethod
     def history_count():
         return len(Calculator.history)
@@ -41,7 +52,9 @@ class Calculator:
     @staticmethod
     def multiplying_numbers(value_x, value_y):
         """ multiply two numbers and store the result"""
-        return value_x * value_y
+        multiplication = Multiplication.create(value_x, value_y)
+        Calculator.add_calculation_to_history(multiplication)
+        return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
     def dividing_numbers(value_x, value_y):
