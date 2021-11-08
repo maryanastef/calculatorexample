@@ -2,8 +2,6 @@
 # namespace
 from calc.calculation import Calculation
 
-# extending Addition Class
-
 
 class Addition(Calculation):
     """"Addition class has one method to get the result"""

@@ -3,6 +3,7 @@
 from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
+from calc.division import Division
 """ created calculator class"""
 
 
@@ -59,7 +60,9 @@ class Calculator:
     @staticmethod
     def dividing_numbers(value_x, value_y):
         """ divide two numbers and store the result"""
-        return value_x / value_y
+        division = Division.create(value_x, value_y)
+        Calculator.add_calculation_to_history(division)
+        return Calculator.get_result_of_last_calculation_added_to_history()
     try:
         value_x = 1
         value_y = 0

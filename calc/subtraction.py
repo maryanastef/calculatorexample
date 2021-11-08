@@ -2,11 +2,9 @@
 # namespace
 from calc.calculation import Calculation
 
-# extending Subtraction Class
-
 
 class Subtraction(Calculation):
-    """"Addition class has one method to get the result"""
+    """"Subtraction class has one method to get the result"""
     def getResult(self):
         # referencing data contained in the instance of the object
         return self.value_x - self.value_y

@@ -1,8 +1,7 @@
 """Testing the Calculator"""
 import pytest
-
-from calculator.main import Calculator
 import pprint
+from calculator.main import Calculator
 
 
 @pytest.fixture
@@ -37,10 +36,12 @@ def test_count_history(clear_history):
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.history_count() == 2
 
+
 def test_get_last_calculation_result(clear_history):
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.get_result_of_last_calculation_added_to_history() == 4
+
 
 def test_get_first_calculation_result(clear_history):
     assert Calculator.adding_numbers(1, 2) == 3
@@ -50,14 +51,32 @@ def test_get_first_calculation_result(clear_history):
 
 def test_calculator_subtracting(clear_history):
     """Testing the subtraction"""
+    assert Calculator.subtracting_numbers(4, 2) == 2
     assert Calculator.subtracting_numbers(1, 2) == -1
+    assert Calculator.subtracting_numbers(3, 2) == 1
+    assert Calculator.subtracting_numbers(1, 1) == 0
+    assert Calculator.history_count() == 4
+    assert Calculator.get_result_of_last_calculation_added_to_history() == 0
+    pprint.pprint(Calculator.history)
 
 
 def test_calculator_multiplying(clear_history):
     """Testing multiplication of two numbers"""
+    assert Calculator.multiplying_numbers(4, 2) == 8
     assert Calculator.multiplying_numbers(1, 2) == 2
+    assert Calculator.multiplying_numbers(3, 2) == 6
+    assert Calculator.multiplying_numbers(2, 2) == 4
+    assert Calculator.history_count() == 4
+    assert Calculator.get_result_of_last_calculation_added_to_history() == 4
+    pprint.pprint(Calculator.history)
 
 
 def test_calculator_dividing(clear_history):
     """Testing division of two numbers"""
     assert Calculator.dividing_numbers(4, 2) == 2
+    assert Calculator.dividing_numbers(2, 2) == 1
+    assert Calculator.dividing_numbers(2, 0) == 0
+    assert Calculator.dividing_numbers(0, 1) == 0
+    assert Calculator.history_count() == 4
+    assert Calculator.get_result_of_last_calculation_added_to_history() == 0
+    pprint.pprint(Calculator.history)
