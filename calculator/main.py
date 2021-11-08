@@ -1,6 +1,7 @@
 """ Increment Function"""
 # importing the addition namespace
 from calc.addition import Addition
+from calc.subtraction import Subtraction
 
 
 class Calculator:
@@ -32,7 +33,10 @@ class Calculator:
     @staticmethod
     def subtracting_numbers(value_x, value_y):
         """ subtract number from result"""
-        return value_x - value_y
+        # create a subtraction object
+        subtraction = Subtraction.create(value_x, value_y)
+        Calculator.add_calculation_to_history(subtraction)
+        return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
     def multiplying_numbers(value_x, value_y):
