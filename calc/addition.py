@@ -4,7 +4,7 @@ from calc.calculation import Calculation
 
 
 class Addition(Calculation):
-    """"Addition class has one method to get the result"""
-    def getresult(self):
-        # referencing data contained in the instance of the object
+    """Addition class has one method to get the result"""
+    def get_result(self):
+        """referencing data contained in the instance of the object"""
         return self.value_x + self.value_y

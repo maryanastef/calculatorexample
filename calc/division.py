@@ -5,9 +5,9 @@ from calc.calculation import Calculation
 
 class Division(Calculation):
     """"Division class has one method to get the result"""
-    def getresult(self):
+    def get_result(self):
         # referencing data contained in the instance of the object
-        if self.value_y == 0 or self.value_x == 0:
-            print("Cannot divide by zero")
-        else:
+        try:
             return self.value_x / self.value_y
+        except ZeroDivisionError as err:
+            raise ZeroDivisionError from err

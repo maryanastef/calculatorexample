@@ -1,6 +1,6 @@
 """Testing the Calculator"""
-import pytest
 import pprint
+import pytest
 from calculator.main import Calculator
 
 
@@ -9,7 +9,7 @@ def clear_history():
     Calculator.clear_history()
 
 
-def test_calculator_adding(clear_history):
+def test_calculator_adding():
     """Testing the addition"""
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
@@ -20,57 +20,56 @@ def test_calculator_adding(clear_history):
     pprint.pprint(Calculator.history)
 
 
-def test_clear_history(clear_history):
+def test_clear_history():
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.adding_numbers(3, 2) == 5
     assert Calculator.adding_numbers(4, 2) == 6
-    assert Calculator.clear_history() == True
-    assert Calculator.history.count() == 4
-    assert Calculator.history.count() == 0
+    assert Calculator.get_result_of_last_calculation_added_to_history() == 6
+    assert Calculator.clear_history() is True
 
 
-def test_count_history(clear_history):
-    assert Calculator.history_count() == 0
+def test_count_history():
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.history_count() == 2
 
 
-def test_get_last_calculation_result(clear_history):
+def test_get_last_calculation_result():
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.get_result_of_last_calculation_added_to_history() == 4
 
 
-def test_get_first_calculation_result(clear_history):
+def test_get_first_calculation_result():
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.get_result_of_first_calculation_added_to_history() == 3
 
 
-def test_calculator_subtracting(clear_history):
+def test_calculator_subtracting():
     """Testing the subtraction"""
     assert Calculator.subtracting_numbers(4, 2) == 2
     assert Calculator.subtracting_numbers(1, 2) == -1
     assert Calculator.subtracting_numbers(3, 2) == 1
     assert Calculator.subtracting_numbers(1, 1) == 0
-    assert Calculator.history_count() == 4
+    assert Calculator.history_count() == 10
     assert Calculator.get_result_of_last_calculation_added_to_history() == 0
 
 
-def test_calculator_multiplying(clear_history):
+def test_calculator_multiplying():
     """Testing multiplication of two numbers"""
     assert Calculator.multiplying_numbers(4, 2) == 8
     assert Calculator.multiplying_numbers(1, 2) == 2
     assert Calculator.multiplying_numbers(3, 2) == 6
     assert Calculator.multiplying_numbers(2, 2) == 4
-    assert Calculator.history_count() == 4
+    assert Calculator.history_count() == 14
     assert Calculator.get_result_of_last_calculation_added_to_history() == 4
 
 
-def test_calculator_dividing(clear_history):
+def test_calculator_dividing():
     """Testing division of two numbers"""
     assert Calculator.dividing_numbers(4, 2) == 2
     assert Calculator.dividing_numbers(1, 1) == 1
-    assert Calculator.dividing_numbers(1, 0) == "Cannot divide by zero"
+    with pytest.raises(ZeroDivisionError):
+        Calculator.dividing_numbers(1, 0)

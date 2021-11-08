@@ -4,7 +4,6 @@ from calc.addition import Addition
 from calc.subtraction import Subtraction
 from calc.multiplication import Multiplication
 from calc.division import Division
-""" created calculator class"""
 
 
 class Calculator:
@@ -13,7 +12,7 @@ class Calculator:
 
     @staticmethod
     def get_result_of_first_calculation_added_to_history():
-        return Calculator.history[0].getResult()
+        return Calculator.history[0].get_result()
 
     @staticmethod
     def clear_history():
@@ -32,7 +31,7 @@ class Calculator:
     @staticmethod
     def get_result_of_last_calculation_added_to_history():
         # -1 gets the last item added to the list automatically
-        return Calculator.history[-1].getResult()
+        return Calculator.history[-1].get_result()
 
     @staticmethod
     def adding_numbers(value_x, value_y):
@@ -53,13 +52,11 @@ class Calculator:
     @staticmethod
     def multiplying_numbers(value_x, value_y):
         """ multiply two numbers and store the result"""
-        multiplication = Multiplication.create(value_x, value_y)
-        Calculator.add_calculation_to_history(multiplication)
+        Calculator.add_calculation_to_history(Multiplication.create(value_x, value_y))
         return Calculator.get_result_of_last_calculation_added_to_history()
 
     @staticmethod
     def dividing_numbers(value_x, value_y):
         """ divide two numbers and store the result"""
-        division = Division.create(value_x, value_y)
-        Calculator.add_calculation_to_history(division)
+        Calculator.add_calculation_to_history(Division.create(value_x, value_y))
         return Calculator.get_result_of_last_calculation_added_to_history()
