@@ -33,6 +33,8 @@ def test_count_history():
     assert Calculator.adding_numbers(1, 2) == 3
     assert Calculator.adding_numbers(2, 2) == 4
     assert Calculator.history_count() == 2
+    assert Calculator.clear_history() is True
+    assert Calculator.history_count() == 0
 
 
 def test_get_last_calculation_result():
@@ -53,8 +55,10 @@ def test_calculator_subtracting():
     assert Calculator.subtracting_numbers(1, 2) == -1
     assert Calculator.subtracting_numbers(3, 2) == 1
     assert Calculator.subtracting_numbers(1, 1) == 0
-    assert Calculator.history_count() == 10
+    assert Calculator.history_count() == 8
     assert Calculator.get_result_of_last_calculation_added_to_history() == 0
+    assert Calculator.clear_history() is True
+    assert Calculator.history_count() == 0
 
 
 def test_calculator_multiplying():
@@ -63,8 +67,10 @@ def test_calculator_multiplying():
     assert Calculator.multiplying_numbers(1, 2) == 2
     assert Calculator.multiplying_numbers(3, 2) == 6
     assert Calculator.multiplying_numbers(2, 2) == 4
-    assert Calculator.history_count() == 14
+    assert Calculator.history_count() == 4
     assert Calculator.get_result_of_last_calculation_added_to_history() == 4
+    assert Calculator.clear_history() is True
+    assert Calculator.history_count() == 0
 
 
 def test_calculator_dividing():
