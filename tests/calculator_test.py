@@ -1,7 +1,7 @@
 """Testing the Calculator"""
 import pprint
 import pytest
-from calculator.main import Calculator
+from calculator.calculator import Calculator
 
 
 @pytest.fixture

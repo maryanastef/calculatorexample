@@ -1,6 +1,6 @@
 """ Division calculation that inherits the value_x and value_y from the class"""
 # namespace
-from calc.calculation import Calculation
+from calculator.calculations.calculation import Calculation
 
 
 class Division(Calculation):

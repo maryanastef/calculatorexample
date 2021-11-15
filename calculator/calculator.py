@@ -1,9 +1,9 @@
 """ Increment Function"""
 # importing the addition namespace
-from calc.addition import Addition
-from calc.subtraction import Subtraction
-from calc.multiplication import Multiplication
-from calc.division import Division
+from calculator.calculations.addition import Addition
+from calculator.calculations.subtraction import Subtraction
+from calculator.calculations.multiplication import Multiplication
+from calculator.calculations.division import Division
 
 
 class Calculator:
