@@ -1,10 +1,15 @@
-""" Subtraction calculation that inherits the value_x and value_y from the class"""
-# namespace
+""" Subtraction Class"""
+import pprint
+
 from calculator.calculations.calculation import Calculation
 
 
 class Subtraction(Calculation):
-    """"Subtraction class has one method to get the result"""
+    """"Subtraction calculation object"""
     def get_result(self):
-        """referencing data contained in the instance of the object"""
-        return self.value_x - self.value_y
+        """get the subtraction results"""
+        difference_of_values = 0.0
+        for value in self.values:
+            difference_of_values = difference_of_values - value
+            pprint.pprint(value)
+        return difference_of_values

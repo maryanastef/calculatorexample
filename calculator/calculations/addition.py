@@ -1,10 +1,13 @@
-""" Addition calculation that inherits the value_x and value_y from the class"""
+""" Addition Class"""
 # namespace
 from calculator.calculations.calculation import Calculation
 
 
 class Addition(Calculation):
-    """Addition class has one method to get the result"""
+    """Calculation Addition Class"""
     def get_result(self):
-        """referencing data contained in the instance of the object"""
-        return self.value_x + self.value_y
+        """get the addition results"""
+        sum_of_values = 0.0
+        for value in self.values:
+            sum_of_values = value + sum_of_values
+        return sum_of_values

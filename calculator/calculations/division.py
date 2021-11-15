@@ -1,13 +1,15 @@
-""" Division calculation that inherits the value_x and value_y from the class"""
+""" Division Class"""
 # namespace
 from calculator.calculations.calculation import Calculation
 
 
 class Division(Calculation):
-    """"Division class has one method to get the result"""
+    """"Division calculation object"""
     def get_result(self):
-        # referencing data contained in the instance of the object
-        try:
-            return self.value_x / self.value_y
-        except ZeroDivisionError as error:
-            raise ZeroDivisionError from error
+        """get the division results"""
+        result = 1.0
+        for value in self.values:
+            try:
+                result = result / value
+            except ZeroDivisionError as error:
+                raise ZeroDivisionError from error

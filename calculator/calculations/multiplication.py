@@ -1,10 +1,13 @@
-""" Multiplication calculation that inherits the value_x and value_y from the class"""
+""" Multiplication Class"""
 # namespace
 from calculator.calculations.calculation import Calculation
 
 
 class Multiplication(Calculation):
-    """"Multiplication class has one method to get the result"""
+    """"Multiplication calculation object"""
     def get_result(self):
-        """referencing data contained in the instance of the object"""
-        return self.value_x * self.value_y
+        """get the multiplication results"""
+        result = 1.0
+        for value in self.values:
+            result = result * value
+        return result
