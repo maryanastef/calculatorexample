@@ -1,60 +1,39 @@
 """ Increment Function"""
-# importing the addition namespace
-from calculator.calculations.addition import Addition
-from calculator.calculations.subtraction import Subtraction
-from calculator.calculations.multiplication import Multiplication
-from calculator.calculations.division import Division
+from calculator.history.calculations import Calculations
+
+# The calculator class just contains the methods to calculate
 
 
 class Calculator:
-    """ history is a numbered list of calculations"""
-    history = []
+    """ This is the Calculator Class"""
+    # The calculator class just calls methods on Calculation Class
+    @staticmethod
+    def get_last_result_value():
+        """This is the gets the result of the calculation"""
+        # this method doesn't allow more than one action per function
+        return Calculations.get_last_calculation_result_value()
 
     @staticmethod
-    def get_result_of_first_calculation_added_to_history():
-        return Calculator.history[0].get_result()
-
-    @staticmethod
-    def clear_history():
-        Calculator.history.clear()
-        return True
-
-    @staticmethod
-    def history_count():
-        return len(Calculator.history)
-
-    @staticmethod
-    def add_calculation_to_history(calculation):
-        Calculator.history.append(calculation)
-        return True
-
-    @staticmethod
-    def get_result_of_last_calculation_added_to_history():
-        # -1 gets the last item added to the list automatically
-        return Calculator.history[-1].get_result()
-
-    @staticmethod
-    def adding_numbers(value_x, value_y):
-        """ adds number to result"""
+    def add_numbers(tuple_values: tuple):
+        """ adds list of numbers"""
         # create an addition object
-        Calculator.add_calculation_to_history(Addition.create(value_x, value_y))
-        return Calculator.get_result_of_last_calculation_added_to_history()
+        Calculations.add_addition_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def subtracting_numbers(value_x, value_y):
-        """ subtract number from result"""
-        # create a subtraction object
-        Calculator.add_calculation_to_history(Subtraction.create(value_x, value_y))
-        return Calculator.get_result_of_last_calculation_added_to_history()
+    def subtract_numbers(tuple_values: tuple):
+        """ subtract a list of numbers from result"""
+        Calculations.add_subtraction_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def multiplying_numbers(value_x, value_y):
-        """ multiply two numbers and store the result"""
-        Calculator.add_calculation_to_history(Multiplication.create(value_x, value_y))
-        return Calculator.get_result_of_last_calculation_added_to_history()
+    def multiply_numbers(tuple_values: tuple):
+        """ multiplication number from result"""
+        Calculations.add_multiplication_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def dividing_numbers(value_x, value_y):
-        """ divide two numbers and store the result"""
-        Calculator.add_calculation_to_history(Division.create(value_x, value_y))
-        return Calculator.get_result_of_last_calculation_added_to_history()
+    def divide_numbers(tuple_values: tuple):
+        """ division number from result"""
+        Calculations.add_division_calculation(tuple_values)
+        return True
