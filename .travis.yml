@@ -12,4 +12,5 @@ branches:
   only:
     - main
     - calc_part2
+    - refractor
     - development
