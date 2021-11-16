@@ -10,7 +10,6 @@ class Division(Calculation):
         result = 1.0
         for value in self.values:
             if value == 0:
-                return ZeroDivisionError
-            else:
-                result = result / value
+                return "Cannot divide by zero"
+            result = result / value
         return result

@@ -45,4 +45,7 @@ def test_calculator_divide_static(clear_history_fixture):
     # using Tuple instead of args because we can pack as much data as we need into the tuple
     my_tuple = (1.0, 1.0, 0.0)
     Calculator.divide_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == ZeroDivisionError
+    assert Calculator.get_last_result_value() == "Cannot divide by zero"
+    my_tuple = (1.0, 1.0, 2.0)
+    Calculator.divide_numbers(my_tuple)
+    assert Calculator.get_last_result_value() == 0.5
