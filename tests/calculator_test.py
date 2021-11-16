@@ -43,6 +43,6 @@ def test_calculator_divide_static(clear_history_fixture):
     """ Testing the division method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
     # using Tuple instead of args because we can pack as much data as we need into the tuple
-    my_tuple = (1.0,1.0,3.0)
+    my_tuple = (1.0, 1.0, 0.0)
     Calculator.divide_numbers(my_tuple)
-    assert Calculator.get_last_result_value() == 1.0 / 3.0
+    assert Calculator.get_last_result_value() == ZeroDivisionError

@@ -9,7 +9,8 @@ class Division(Calculation):
         """get the division results"""
         result = 1.0
         for value in self.values:
-            try:
+            if value == 0:
+                return ZeroDivisionError
+            else:
                 result = result / value
-            except ZeroDivisionError as error:
-                raise ZeroDivisionError from error
+        return result
