@@ -1,7 +1,7 @@
 """Testing the Calculator"""
 import pytest
 from calc.calculator import Calculator
-from calc import Calculations
+from calc.history.calculations import Calculations
 
 
 @pytest.fixture
