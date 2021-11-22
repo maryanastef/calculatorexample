@@ -1,6 +1,6 @@
 """ Addition Class"""
 # namespace
-from calc.calculator.calculations import Calculations
+from calc.calculations import Calculations
 
 
 class Addition(Calculations):
