@@ -1,5 +1,5 @@
 """ Increment Function"""
-from calculator.history.calculations import Calculations
+from calc.history.calculations import Calculations
 
 # The calculator class just contains the methods to calculate
 
