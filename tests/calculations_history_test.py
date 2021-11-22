@@ -32,7 +32,7 @@ def test_clear_calculation_history(clear_history_fixture, setup_addition_calcula
     assert Calculations.history_count() == 1
     Calculations.clear_history()
     assert Calculations.history_count() == 0
-    assert Calculations.clear_history() == True
+    assert Calculations.clear_history() is True
 
 
 def test_get_calculation(clear_history_fixture, setup_addition_calculation_fixture):
