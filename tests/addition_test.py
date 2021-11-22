@@ -1,5 +1,8 @@
 """Testing Addition"""
-from calc import Addition
+from calc.calculations.addition import Addition
+from calc.calculations.subtraction import Subtraction
+from calc.calculations.multiplication import Multiplication
+from calc.calculations.division import Division
 
 
 def test_calculation_addition():

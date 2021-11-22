@@ -1,6 +1,6 @@
 """ Division Class"""
 # namespace
-from calc import Calculation
+from calc.calculations.calculation import Calculation
 
 
 class Division(Calculation):

@@ -1,7 +1,7 @@
 """ Subtraction Class"""
 import pprint
 
-from calc import Calculation
+from calc.calculations.calculation import Calculation
 
 
 class Subtraction(Calculation):
