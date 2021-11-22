@@ -1,6 +1,6 @@
 """ Multiplication Class"""
 # namespace
-from calculator.calculations.calculation import Calculation
+from calc import Calculation
 
 
 class Multiplication(Calculation):

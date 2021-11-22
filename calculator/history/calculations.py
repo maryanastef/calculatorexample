@@ -6,7 +6,7 @@ from calculator.calculations.division import Division
 
 
 class Calculations:
-    """ Calculations class merges the history of calculations"""
+    """ Calculations class manages the history of calculations"""
     history = []
     # pylint: disable=too-few-public-methods
 

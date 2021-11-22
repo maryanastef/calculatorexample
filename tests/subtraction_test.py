@@ -1,5 +1,5 @@
 """Testing Subtraction"""
-from calculator.calculations.subtraction import Subtraction
+from calc import Subtraction
 
 
 def test_calculation_subtraction():
