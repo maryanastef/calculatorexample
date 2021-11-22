@@ -1,8 +1,8 @@
 """ Calculation History Class """
-from calculator.calculations.addition import Addition
-from calculator.calculations.subtraction import Subtraction
-from calculator.calculations.multiplication import Multiplication
-from calculator.calculations.division import Division
+from calc.calculator.calculations.addition import Addition
+from calc.calculator.calculations.subtraction import Subtraction
+from calc.calculator.calculations.multiplication import Multiplication
+from calc.calculator.calculations.division import Division
 
 
 class Calculations:

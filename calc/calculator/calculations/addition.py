@@ -1,9 +1,9 @@
 """ Addition Class"""
 # namespace
-from calc import Calculation
+from calc.calculator.calculations import Calculations
 
 
-class Addition(Calculation):
+class Addition(Calculations):
     """Calculation Addition Class"""
     def get_result(self):
         """get the addition results"""
