@@ -49,3 +49,5 @@ def test_calculator_divide_static(clear_history_fixture):
     my_tuple = (1.0, 1.0, 2.0)
     Calculator.divide_numbers(my_tuple)
     assert Calculator.get_last_result_value() == 0.5
+
+    # use pandas to read csv file, loop through csv file, call assert on each calculation
