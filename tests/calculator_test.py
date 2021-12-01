@@ -1,5 +1,8 @@
 """Testing the Calculator"""
+import os
+import sys
 import pytest
+import pandas as pd
 from calc.calculator import Calculator
 from calc.history.calculations import Calculations
 
@@ -51,3 +54,9 @@ def test_calculator_divide_static(clear_history_fixture):
     assert Calculator.get_last_result_value() == 0.5
 
     # use pandas to read csv file, loop through csv file, call assert on each calculation
+
+
+# setting a path
+directory = os.getcwd()
+path = os.path.dirname(directory)
+sys.path.append(path)
