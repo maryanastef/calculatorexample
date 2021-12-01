@@ -1,10 +1,9 @@
-import unittest
-from csvreader.csvreader import ReadCSV
+import pandas as pd
+import numpy as np
+from csvreader.main import ReadCSV
 
-
-#class CsvTest(unittest.TestCase):
-
-  #  def setUp(self) = None:
- #       self.csv_reader = ReadCSV("C:/Users/maryanastef/PycharmProjects/calculatorexample/csvreader/addition_sample.csv")
-
-  #  def test_return_data_as_object(self):
+def csv_test():
+    df = pd.read_csv("calc/csvreader/addition_sample.csv")
+    print(df.to_string())
+    for i, row in df.itterows():
+        ehilr
