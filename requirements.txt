@@ -3,3 +3,5 @@ pytest
 pycodestyle
 pytest-pylint
 pandas
+flask
+uwsgi

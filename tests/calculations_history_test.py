@@ -9,6 +9,7 @@ def clear_history_fixture():
     """define a function that will run each time you pass it to a test, it is called a fixture"""
     # pylint: disable=redefined-outer-name
     Calculations.clear_history()
+    return True
 
 
 @pytest.fixture
