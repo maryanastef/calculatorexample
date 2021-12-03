@@ -5,7 +5,7 @@ from watchdog.events import PatternMatchingEventHandler
 from test_data.csv_test import CsvReader
 
 
-def getFilename(filestr : str):
+def get_file_name(filestr : str):
     last = filestr.rfind("/") # reverse find gets the last occurrence of the "/" char
     filename = filestr[last + 1: len(filestr)]
     return filename
@@ -27,13 +27,13 @@ if __name__ == "__main__":
         if "csv" in event.src_path:
             print(event.src_path + " is CSV")
             fh = CsvReader() # Create a CsvReader object
-            nump_arr = fh.read_csv(event.src_path) # Run test on file
+            nump_arr = fh.read_csv(event.src_path)
             # Get the filename
-            filename = getFilename(event.src_path)
+            filename = get_file_name(event.src_path)
             # Process the array
             fh.process_csv(nump_arr, filename)
             # Move file to "done" folder
-            os.rename(filename, "done/" + filename)  # os.rename('old_directory/test_file.txt', 'new_directory/test_file.txt')
+            os.rename(filename, "done/" + filename)
             # Create/Append to the log file
 
 
@@ -54,7 +54,7 @@ if __name__ == "__main__":
 
     my_event_handler.on_moved = on_moved
 
-    path = "/home/myuser/"    #"."
+    path = "/home/myuser/"
     print("path = " + path)
     go_recursively = True
     my_observer = Observer()

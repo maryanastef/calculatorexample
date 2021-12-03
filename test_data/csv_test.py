@@ -6,7 +6,7 @@ import os
 
 
 class CsvReader:
-    """This is the Filehandler Class"""
+    """This is the CsvReader Class"""
 
     calc_log =np.array([])
 
@@ -21,17 +21,17 @@ class CsvReader:
     @staticmethod
     def create_calc_log(rec_num, utime, filename, operation, result):
         temp_array = np.array([rec_num, utime, filename, operation, result])
-        if len(Filehandler.calc_log) == 0:
-            Filehandler.calc_log = np.append(Filehandler.calc_log, temp_array)
+        if len(CsvReader.calc_log) == 0:
+            CsvReader.calc_log = np.append(CsvReader.calc_log, temp_array)
         else:
-            Filehandler.calc_log = np.vstack([Filehandler.calc_log, temp_array])
+            CsvReader.calc_log = np.vstack([CsvReader.calc_log, temp_array])
 
     @staticmethod
     def do_calcs (rec_num, row_array, func, calc_type, filename):
         result = func(row_array)
         if type(result) == str:
             print("error = " + result)
-        Filehandler.create_calc_log(rec_num, time.time(), filename, calc_type, result)
+        CsvReader.create_calc_log(rec_num, time.time(), filename, calc_type, result)
 
     def process_csv(self, nump_arr, filename : str):
         rows, columns = nump_arr.shape
@@ -39,19 +39,17 @@ class CsvReader:
         print("Full path from pandas_csv_test: " + absolute_path)
 
         for row in range(rows):
-            Filehandler.do_calcs((row * 4)+0, nump_arr[row][1:], Calculator.add, "Addition", filename)
-            Filehandler.do_calcs((row * 4)+1, nump_arr[row][1:], Calculator.subtract, "Subtraction", filename)
-            Filehandler.do_calcs((row * 4)+2, nump_arr[row][1:], Calculator.multiply, "Multiplication", filename)
-            Filehandler.do_calcs((row * 4)+3, nump_arr[row][1:], Calculator.divide, "Division", filename)
+            CsvReader.do_calcs((row * 4)+0, nump_arr[row][1:], Calculator.add, "Addition", filename)
+            CsvReader.do_calcs((row * 4)+1, nump_arr[row][1:], Calculator.subtract, "Subtraction", filename)
+            CsvReader.do_calcs((row * 4)+2, nump_arr[row][1:], Calculator.multiply, "Multiplication", filename)
+            CsvReader.do_calcs((row * 4)+3, nump_arr[row][1:], Calculator.divide, "Division", filename)
         print("calc_log:")
-        print(Filehandler.calc_log)
+        print(CsvReader.calc_log)
         print("Writing to CSV")
-        Filehandler.write_to_csv(Filehandler.calc_log)
+        CsvReader.write_to_csv(CsvReader.calc_log)
         print('done')
 
-
-
-    def read_csv(self, eventsrcpath: str):
+    def read_csv_file(self, eventsrcpath: str):
         print("***pandas_csv.py***")
         df = pd.read_csv(eventsrcpath)
         print(df.columns)
