@@ -1,4 +1,3 @@
-
 """A simple flask web app"""
 from flask import Flask, request
 from flask import render_template

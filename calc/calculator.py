@@ -1,5 +1,9 @@
 """ Increment Function"""
 from calc.history.calculations import Calculations
+from calc.calculations.addition import Addition
+from calc.calculations.subtraction import Subtraction
+from calc.calculations.multiplication import Multiplication
+from calc.calculations.division import Division
 
 # The calculator class just contains the methods to calculate
 
@@ -14,26 +18,30 @@ class Calculator:
         return Calculations.get_last_calculation_result_value()
 
     @staticmethod
-    def add_numbers(tuple_values: tuple):
+    def add_numbers(values):
         """ adds list of numbers"""
         # create an addition object
-        Calculations.add_addition_calculation(tuple_values)
-        return True
+        add = Addition(values)
+        Calculations.add_addition_calculation(add)
+        return Calculations.get_result()
 
     @staticmethod
-    def subtract_numbers(tuple_values: tuple):
+    def subtract_numbers(values):
         """ subtract a list of numbers from result"""
-        Calculations.add_subtraction_calculation(tuple_values)
-        return True
+        subtract = Subtraction(values)
+        Calculations.add_subtraction_calculation(subtract)
+        return Calculations.get_result()
 
     @staticmethod
-    def multiply_numbers(tuple_values: tuple):
+    def multiply_numbers(values):
         """ multiplication number from result"""
-        Calculations.add_multiplication_calculation(tuple_values)
-        return True
+        multiply = Multiplication(values)
+        Calculations.add_multiplication_calculation(multiply)
+        return Calculations.get_result()
 
     @staticmethod
-    def divide_numbers(tuple_values: tuple):
+    def divide_numbers(values):
         """ division number from result"""
-        Calculations.add_division_calculation(tuple_values)
-        return True
+        div = Division(values)
+        Calculations.add_division_calculation(div)
+        return Calculations.get_result()
