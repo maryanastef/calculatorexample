@@ -1,5 +1,6 @@
 """ Calculation History Class """
 
+
 class Calculations:
     """ Calculations class manages the history of calculations"""
     history = []
