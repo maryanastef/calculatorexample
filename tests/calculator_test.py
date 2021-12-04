@@ -1,12 +1,20 @@
 """Testing the Calculator"""
-import pandas as pd
+import pytest
 from calc.calculator import Calculator
+from calc.history.calculations import Calculations
+
+
+@pytest.fixture
+def clear_history_fixture():
+    """define a function that will run each time you pass it to a test, it is called a fixture"""
+    # pylint: disable=redefined-outer-name
+    Calculations.clear_history()
 
 
 def test_calculator_add(clear_history_fixture):
     """testing the add function of the calculator"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculator.add_numbers((1, 2, 3)) == 6
+    assert Calculations.add_numbers((1, 2, 3)) == 6
 
 
 def test_calculator_subtract(clear_history_fixture):

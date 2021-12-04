@@ -1,6 +1,5 @@
 """Testing the Calculator"""
 import pytest
-import pandas as pd
 from calc.history.calculations import Calculations
 from calc.calculations.addition import Addition
 
