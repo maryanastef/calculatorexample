@@ -1,4 +1,4 @@
-import time
+"""Unix timestamp"""
 import datetime
 
 date = datetime.datetime.now()

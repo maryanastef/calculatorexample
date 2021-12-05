@@ -18,30 +18,26 @@ class Calculator:
         return Calculations.get_last_calculation_result_value()
 
     @staticmethod
-    def add_numbers(values):
+    def add_numbers(tuple_values: tuple):
         """ adds list of numbers"""
         # create an addition object
-        add = Addition(values)
-        Calculations.add_addition_calculation(add)
-        return Calculations.get_result()
+        Calculations.add_addition_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def subtract_numbers(values):
+    def subtract_numbers(tuple_values: tuple):
         """ subtract a list of numbers from result"""
-        subtract = Subtraction(values)
-        Calculations.add_subtraction_calculation(subtract)
-        return Calculations.get_result()
+        Calculations.add_subtraction_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def multiply_numbers(values):
+    def multiply_numbers(tuple_values: tuple):
         """ multiplication number from result"""
-        multiply = Multiplication(values)
-        Calculations.add_multiplication_calculation(multiply)
-        return Calculations.get_result()
+        Calculations.add_multiplication_calculation(tuple_values)
+        return True
 
     @staticmethod
-    def divide_numbers(values):
+    def divide_numbers(tuple_values: tuple):
         """ division number from result"""
-        div = Division(values)
-        Calculations.add_division_calculation(div)
-        return Calculations.get_result()
+        Calculations.add_division_calculation(tuple_values)
+        return True

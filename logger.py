@@ -1,8 +1,9 @@
-# create a log of everything in the calculator
+"""create a log of everything in the calculator"""
 import logging
 
 logging.basicConfig(format='%(asctime)s,%(msecs)d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
-                    datefmt='%Y-%m-%d:%H:%M:%S', filename = "log_history",
+                    datefmt='%Y-%m-%d:%H:%M:%S',
+                    filename="log_history",
                     level=logging.DEBUG)
 
 # Creating an object
