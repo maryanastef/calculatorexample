@@ -2,3 +2,11 @@
 2021-12-05:04:40:36,105 ERROR    [logger.py:17] Error: Cannot Divide by Zero
 2021-12-05:04:41:02,637 DEBUG    [logger.py:16] This is a debug log
 2021-12-05:04:41:02,638 ERROR    [logger.py:17] Error: Cannot Divide by Zero
+2021-12-05:05:01:34,707 DEBUG    [logger.py:17] This is a debug log
+2021-12-05:05:01:34,709 ERROR    [logger.py:18] Error: Cannot Divide by Zero
+2021-12-05:05:01:38,787 DEBUG    [logger.py:17] This is a debug log
+2021-12-05:05:01:38,788 ERROR    [logger.py:18] Error: Cannot Divide by Zero
+2021-12-05:05:02:08,633 DEBUG    [logger.py:17] This is a debug log
+2021-12-05:05:02:08,634 ERROR    [logger.py:18] Error: Cannot Divide by Zero
+2021-12-05:05:02:15,867 DEBUG    [logger.py:17] This is a debug log
+2021-12-05:05:02:15,868 ERROR    [logger.py:18] Error: Cannot Divide by Zero

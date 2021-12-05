@@ -1,9 +1,7 @@
+
+
 """ Increment Function"""
 from calc.history.calculations import Calculations
-from calc.calculations.addition import Addition
-from calc.calculations.subtraction import Subtraction
-from calc.calculations.multiplication import Multiplication
-from calc.calculations.division import Division
 
 # The calculator class just contains the methods to calculate
 
