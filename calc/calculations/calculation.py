@@ -8,6 +8,11 @@ class Calculation:
         """Constructor method"""
         self.values = Calculation.convert_args_to_tuple_of_float(values)
 
+    @classmethod
+    # CLass Factory Method
+    def create(cls, values: tuple):
+        return cls(values)
+
     @staticmethod
     def convert_args_to_tuple_of_float(values):
         """Standardize values to lists of floats"""

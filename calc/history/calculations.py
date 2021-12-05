@@ -40,3 +40,4 @@ class Calculations:
         """Clear the history of the calculator"""
         Calculations.history.clear()
         return True
+
