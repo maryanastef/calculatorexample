@@ -8,5 +8,3 @@
 6,7,2
 7,8,0
 8,9,2
-DEBUG:__main__:This message should go to log file
-ERROR:__main__:Error, Cannot divide by zero
