@@ -1,5 +1,5 @@
 """A simple flask web app"""
-from flask import Flask
+from flask import Flask, flash, render_template
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
 
@@ -20,3 +20,14 @@ def calculator_get():
 @app.route("/calculator", methods=['POST'])
 def calculator_post():
     return CalculatorController.post()
+
+
+@app.route("/")
+def flash_test():
+    flash("This is a flash test. Welcome to the Calculator!")
+    return render_template("base.html")
+
+
+if __name__ == '__main__':
+   app.run(debug = True)
+
