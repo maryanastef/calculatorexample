@@ -1,5 +1,5 @@
 """A simple flask web app"""
-from flask import Flask, flash, render_template
+from flask import Flask, flash, render_template, url_for, redirect, request
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
 
@@ -29,5 +29,4 @@ def flash_test():
 
 
 if __name__ == '__main__':
-   app.run(debug = True)
-
+    app.run()
