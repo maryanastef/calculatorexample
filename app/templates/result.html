@@ -4,25 +4,42 @@
     {{ super() }}
     <style type="text/css">
         .important {
-            color: #336699; }
+            color: #336699;
+        }
     </style>
 {% endblock %}
 {% block content %}
-
     <h1>Calculation Result</h1>
-     {% if error %}
-        <div class="alert alert-danger error" role="alert">
-            {{ error }}
-        </div>
-    else:
-            <div class="alert alert-success" role="alert">
-                {{ message }}
-            </div>
-    {% endif %}
-
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-primary" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <strong>Value 1: </strong> {{ value1 }} <br>
     <strong>Value 2: </strong> {{ value2 }} <br>
     <strong>Operation: </strong> {{ operation }} <br>
     <strong>Result: </strong> {{ result }}
+
+
+
+    {% if item in data %}
+        <table>
+            {% for item in data %}
+                <TR>
+                    <TD class="c1"><IMG src="sample.jpeg"></TD>
+                    <TD class="c2">{{ item.date }}</TD>
+                    <TD class="c3">{{ item.id }}</TD>
+                    <TD class="c4"><SPAN>{{ item.date }}</SPAN></TD>
+                    <TD class="c4"><SPAN>{{ item.status }}</SPAN></TD>
+                </TR>
+            {% endfor %}
+        </table>
+    {% else %}
+        <h1>There are no calculations</h1>
+    {% endif %}
 
 {% endblock %}
