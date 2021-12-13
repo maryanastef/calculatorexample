@@ -29,3 +29,26 @@ def table():
     """returns table"""
     return render_template("table.html")
 
+
+@app.route("/article1")
+def article1():
+    """returns table"""
+    return render_template("article1.html")
+
+
+@app.route("/article2")
+def article2():
+    """returns table"""
+    return render_template("article2.html")
+
+
+@app.route("/article3")
+def article3():
+    """returns table"""
+    return render_template("article3.html")
+
+
+@app.route("/article4")
+def article4():
+    """returns table"""
+    return render_template("article4.html")

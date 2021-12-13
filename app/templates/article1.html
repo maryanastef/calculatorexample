@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <h1 style="margin-top: 20px; margin-left: 20px"><strong>AAA Testing with Python</strong></h1>
+
+    <div class="container my-container" style="padding: 30px">
+        <div class="row my-row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <h4><u><strong>What is AAA Testing?</strong></u></h4>
+                <p><strong>AAA Testing,</strong> also known as <strong> Arrange-Act-Assert,</strong> is a great way to
+                    structure test cases. It describes the order of operations that need to be performed to write a good
+                    test.
+                    AAA Testing represents a recognizable test template following the A-A-A pattern of testing. The
+                    pattern focuses each test on a <u> single action.</u></p>
+                <p> By applying AAA, you can ensure that your test is
+                    clear and more understandable and manageable. </p>
+                <p><i>For more information on AAA Testing, please read the article</i> <a
+                        href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/"
+                        target="_blank"><i> Arrange-Act-Assert </i></a></p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <h5><strong><u>The A-A-A Pattern (Arrange-Act-Assert):</u></strong></h5>
+                    <ol>
+                        <li><strong> Arrange:</strong> inputs and targets. Arrange steps set up the test case. It will
+                            tell you if the test requires any objects or special settings, if it needs to log into a web
+                            app, etc.
+                        </li>
+                        <li><strong> Act: </strong> acts on the target behavior. Act steps cover the main thing to be
+                            tested, like calling a function or method.
+                        </li>
+                        <li><strong> Assert: </strong> asserts expected outcomes. Act steps return some sort of a
+                            response and Assert steps verify the “goodness or badness” of that response. This step
+                            determines if the test <strong>PASSES or FAILS. </strong> Sometimes, assertions can be
+                            simple, like checking if a calculator adds, subtracts, multiplies or divides numbers
+                            properly. Other times, assertions can require checking multiple facets of a system.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="row my-row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <h4><u><strong>Unit Testing: </strong></u></h4>
+                <p> Unit Testing is a method that is used to test programs and applications to see if they function
+                    correctly and without any problems.
+                    It is part of software testing, which involves many steps. If any problems occur, they should be
+                    taken care of early on, so that they don't show up later for the end users.</p>
+                <p> The main purpose behind unit testing is to check that all individual parts are working well like it
+                    is supposed to. The entire system will only be able to work well if the individual parts are working
+                    well.</p>
+                <p> There are two types of unit testing: <strong>manual and automated. </strong>The automated method is
+                    most preferred because it is faster and more accurate. Automated testing usually involves the
+                    developer first writing a section of the code in the application so the function can be tested.
+                    The manual approach has a step-by-step instructional procedure that helps developers perform the
+                    test.</p>
+                Here is an example of a basic unit test for Python’s multiplication of a calculator.
+            </div>
+            <div class="my-col">
+                <img class="img-fluid" src="static/images/multiply.jpg" alt="Screenshot from Pycharm">
+                <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <ol>
+                    <li><strong> The Arrange Step </strong> creates a variable named “calc” for testing. It instantiates
+                        the calc class.
+                    </li>
+                    <li><strong> The Act Step </strong> calls the “multiplying_numbers” function using the “calc”
+                        variable and stores the returned variable named “result”.
+                    </li>
+                    <li><strong> The Assert Step </strong> verifies that “result” is correct.</li>
+                </ol>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-4 my-col">
+                <p>Another example is a basic unit test for Python’s division of a calculator.</p>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <img class="img-fluid" src="static/images/division.jpg" alt="Screenshot from Pycharm">
+                <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 my-col">
+                <ol>
+                    <li><strong> The Arrange Step </strong> creates a variable named “calc” for testing. It instantiates
+                        the calc class.
+                    </li>
+                    <li><strong> The Act Step </strong> calls the “dividing_numbers” function using the “calc” variable
+                        and stores the returned variable named “result”.
+                    </li>
+                    <li><strong> The Assert Step </strong> verifies that “result” is correct.</li>
+                </ol>
+            </div>
+            <p><i>For more information on AAA Testing and Unit Testing, please read the</i> <a
+                    href="https://performancelabus.com/unit-testing-importance/#1" target="_blank"> <i> Unit Testing
+                Article.</i> </a></p>
+        </div>
+        <div class="row my-row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <h4><u><strong>Pytest: </strong></u></h4>
+                <p> Pytest is another framework for testing that allows developers to write test codes using Python. An
+                    advantage of a pytest is that it can run tests in parallel, it can run specific tests, or it can
+                    skip tests that you want it to skip.</p>
+                <p>In order to use Pytest, you need to install it: </p>
+                <p class="col-lg-2 col-md-2 col-sm-2" style="background-color:darkseagreen">pip install pytest</p>
+                <p> Then, you must import pytest into your code and save:</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/pytest.jpg" alt="Screenshot from Pycharm">
+                    <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+                </div>
+                <p>When running a simple test, Pytest expects our tests to be located in files whose names begin with
+                    <strong> test_ or end with _test.py</strong>. In the image below, you can see I created a file named
+                    <strong>calculator_test.py</strong></p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/testfile.jpg" alt="Screenshot from Pycharm">
+                    <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+                </div>
+                <p>In the terminal, you can run the test using the command: </p>
+                <p class="col-lg-2 col-md-2 col-sm-2" style="background-color:darkseagreen">pytest</p>
+                <p>Your output will either have no mistakes, or Pytest will tell you what mistake you made. My code
+                    below has no mistakes.</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/nomistake.jpg" alt="Screenshot from Pycharm">
+                    <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+                </div>
+                <p>If there is a mistake, the pytest output will look like the image below. It will tell you exactly
+                    where your mistake is.<br> For example, my mistake says that my multiplication is not correct.
+                    Instead of 6, my
+                    calculator's result should be 4. </p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/mistake.jpg" alt="Screenshot from Pycharm">
+                    <p style="font-size: 8px"><i>[Image from Maryana Stefanyshyn from PyCharm.]</i></p>
+                </div>
+                <p><i>For more information about Pytest, please read <a href="https://docs.pytest.org/en/6.2.x/"
+                                                                        target="_blank"> The Pytest Article </a></i></p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1 style="margin-top: 20px; margin-left: 20px"><strong>Principles of Object-Oriented Programming</strong></h1>
+
+    <div class="container my-container" style="padding: 30px">
+        <div class="row my-row">
+            <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                <h4><u><strong>OOP (Object-Oriented Programming)</strong></u></h4>
+                <p>In Python, Object-Oriented Programming is a way of programming that uses objects and classes. The
+                    main concept of OOP is to connect the data and the functions that work together as a single unit so
+                    that no other part of the code can access this data. </p>
+                <p>An object has two characteristics: </p>
+                <ul>
+                    <li><i>Attributes</i></li>
+                    <li><i>Behavior</i></li>
+                </ul>
+                <p>The main idea focuses on creating reusable code using OOP principles. </p>
+                <p>The four principles of object-oriented programming are encapsulation, abstraction, inheritance,
+                    polymorphism.</p>
+                <h5><u><strong>1. Encapsulation:</strong></u></h5>
+                <p>Encapsulation is when each object keeps its state <strong> private,</strong> inside a class. Other
+                    objects don’t have access to this state, they can only call a list of <strong>public
+                        functions,</strong> known as methods. The object manages its own state using methods, and no
+                    other class can access it unless allowed.</p>
+                <p>A class is a collection of objects and contains attributes and methods. For example, if we apply
+                    encapsulation to a calculator example, we encapsulate all calculations into a “Calculation” class.
+                    The Calculation class will be able to track different calculations with different attributes like
+                    addition, subtraction, multiplication, division.</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/encapsulation.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <p><i> For more information about encapsulation, please read</i> <a
+                        href="https://www.geeksforgeeks.org/encapsulation-in-python/" target="_blank"> <i>Encapsulation
+                    in Python </i></a></p>
+                <h5><u><strong>2. Abstraction:</strong></u></h5>
+                <p>Abstraction creates abstract classes, which can be considered as a blueprint for other classes. It
+                    allows us to create methods within any child classes. A class that contains one or more abstract
+                    methods is called an abstract class.</p>
+                <p> In Python, Abstraction is used to hide the functionality of the function from the users. It calls
+                    for a small set of public methods which any other class can call without knowing how they work.</p>
+                <p><i>For more infomation about abstraction, please read</i> <a
+                        href="https://www.geeksforgeeks.org/abstract-classes-in-python/" target="_blank"><i>Abstract
+                    Classes in Python </i></a></p>
+                <h5><u><strong>3. Inheritance:</strong></u></h5>
+                <p>Inheritance is the capability of one class to derive or inherit the properties from another class.
+                    This provides reusability of the code , so you don’t have to write the same code again. Also, it
+                    allows us to add more features to a class without modifying it. </p>
+                <p>It means you create a child class by deriving from another parent class. This way, we form a
+                    hierarchy. The child reuses all fields and methods of the parent class (common part) and can
+                    implement its own unique part. </p>
+                <p>In this example, we have a parent class called "Calculator". The class has data attributes to store
+                    value x and value y. </p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/3.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <p>Then, we call the class factory method, which is an expression that gets evaluated after your
+                    function is defined. The class method can access or modify the class state. It takes cls as its
+                    first argument, followed by other arguments and returns a class method for function. </p>
+                <p>The __init__ method is similar to constructors in other programming languages. It is run as soon as
+                    an object of a class is instantiated. </p>
+                <p>Then, we create a child class Addition, which reuses all fields and methods of the parent class and
+                    implements its own unique calculation by adding value x and value y.</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/4.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <h5><u><strong>4. Polymorphism:</strong></u></h5>
+                <p>Polymorphism means having “many forms”. In programming, it means having the same function name but
+                    different signatures. We can define methods in the child class that have the same name as the
+                    methods in the parent class. </p>
+                <p>Sometimes we want to use a list, which contains a mix of all these classes. Polymorphism allows us to
+                    use a class exactly like its parent so there are no mixing types. Each child class keeps its own
+                    methods as they are. This happens by defining a parent interface to be reused.</p>
+                <p>In my calculator example, addition, subtraction, multiplication and division reuse a common interface
+                    for their calculations. Having these four calculations inherit the parent Calculator lets me create
+                    a list of calculations and treat them like the same type of object. </p>
+                <h6>Addition: </h6>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/add.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <h6>Subtraction: </h6>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/subtract.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <h6>Multiplication: </h6>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/multiply1.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <h6>Division: </h6>
+                <div class="col-lg-12 col-md-12 col-sm-12 my-col">
+                    <img class="img-fluid" src="static/images/divide1.jpg" alt="Screenshot from Pycharm ">
+                    <p style="font-size: 8px"> [Image from Maryana Stefanyshyn from PyCharm] </p>
+                </div>
+                <p>Sources used in this article are:</p>
+                <p><a href="https://www.geeksforgeeks.org/python-oops-concepts/ " target="_blank"> Python OOP
+                    Concepts </a></p>
+                <p><a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/ "
+                      target="_blank">How to explain object-oriented programming concepts to a 6-year-old</a></p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
