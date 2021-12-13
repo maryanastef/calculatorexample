@@ -11,11 +11,23 @@
 {% block content %}
 
     <h1>My Calculator</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
     {% if error %}
         <div class="alert alert-danger error" role="alert">
             {{ error }}
         </div>
     {% endif %}
+
     <div class="mb-3 row">
 
         <form action="/calculator" method="POST">
@@ -41,9 +53,7 @@
                     <input type="radio" name="operation" id="division" value="division">
                     <label for="division">division</label>
                 </div>
-
             </fieldset>
-
             <input type="submit" value="Submit">
         </form>
     </div>

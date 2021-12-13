@@ -24,7 +24,8 @@ def calculator_post():
     return CalculatorController.post()
 
 
-@app.route("/")
-def flash_test():
-    flash("This is a flash test. Welcome to the Calculator!")
-    return render_template("base.html")
+@app.route("/table")
+def table():
+    """returns table"""
+    return render_template("table.html")
+

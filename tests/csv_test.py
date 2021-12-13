@@ -3,10 +3,11 @@ import pandas as pd
 from csv_reader.write import Write
 from csv_reader.read import Read
 
+
 def write_csv_test():
     """Testing the write method"""
     # arrange
-    filename = "data_csv.csv"
+    filename = "addition_sample.csv"
     path = "tests/test_data"
     full_path = path + "/" + filename
     dictionary = {
