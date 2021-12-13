@@ -1,6 +1,8 @@
 
 
 """ Increment Function"""
+from idlelib import history
+
 from calc.history.calculations import Calculations
 
 # The calculator class just contains the methods to calculate
@@ -43,14 +45,14 @@ class Calculator:
     @staticmethod
     def get_history():
         """Get history """
-        return Calculations.history
+        return Calculations.history()
 
     @staticmethod
     def get_history_from_csv():
-        """Get history """
+        """Get history from csv file"""
         return Calculations.read_history_from_csv()
 
     @staticmethod
     def write_history_to_csv():
-        """Get history """
+        """Write history """
         return Calculations.write_history_to_csv()

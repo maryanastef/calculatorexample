@@ -3,6 +3,7 @@ from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
 from calc.calculations.division import Division
+import pandas as pd
 
 
 class Calculations:
@@ -11,15 +12,17 @@ class Calculations:
     # pylint: disable=too-few-public-methods
 
     # method to write history to a csv file
+
     @staticmethod
     def read_history_from_csv():
-        """Read history from csv"""
-
-        return Calculations.read_history_from_csv()
+        """Read history from csv and put it in history"""
+        data = pd.read_csv("addition_sample.csv")
+        return Calculations.history.append(data)
 
     @staticmethod
-    def write_history_to_csv():
+    def write_history_to_csv(history):
         """Write history to csv"""
+        return history.to_csv("history_csv.csv")
 
     @staticmethod
     def clear_history():

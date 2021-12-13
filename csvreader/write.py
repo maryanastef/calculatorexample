@@ -1,5 +1,7 @@
 import os
 
+# Using absolute path
+
 
 class Write:
     @staticmethod

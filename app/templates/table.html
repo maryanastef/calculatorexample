@@ -24,17 +24,18 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            <th>Value 1</th>
+            <th>Value 1 </th>
             <th>Value 2</th>
-            <th>Operation</th>
+            <th>Operation </th>
             <th>Result</th>
           </tr>
           <tr>
-    {% for col in titles %}
-        <th scope="col">{{col}}</th>
-        {% endfor %}
-        </tr>
+              {% for col in titles %}
+                <th scope="col">{{col}}</th>
+              {% endfor %}
+          </tr>
         </thead>
+
        <thead>
         <tr>
            {% for col in titles %}
@@ -42,6 +43,7 @@
             {% endfor %}
         </tr>
         </thead>
+
         <tbody>
        {% for row in row_data %}
         <tr>
