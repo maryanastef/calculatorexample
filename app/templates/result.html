@@ -7,33 +7,40 @@
             font-family: sans-serif;
             border-collapse: collapse;
             border: 1px solid grey;
-            width: 100%;
+            width: 90%;
             height: 100px;
-            width: ;
             text-align: center;
-            margin-left: ;
+            margin-right: 40% ;
+            margin-bottom: 5% ;
+        }
 
+        #results th {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: lightyellow;
+            border: 1px solid grey;
+            color: black;
+            width: 30%;
         }
 
         #results td{
-            border: 1px solid ;
-            padding: 8px;
+            border: 1px solid grey;
+            padding: 20px;
+            text-align: center;
         }
 
         #results tr:nth-child(even) {
-            background-color: orange;
+            background-color: #eee;
         }
 
-        #results th [scope="col"]{
-            padding-top: 0px;
-            padding-bottom: 0px;
-            text-align: center;
-            background-color: black;
-            color: white;
-        }
+          #results th [scope="col"]{
+              background-color: #696969;
+              color: #fff;
+         }
 
          #results th [scope="row"]{
-             background-color: grey;
+             background-color: #d7d9f2;
          }
 
     </style>
@@ -52,19 +59,23 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    <div style="text-align:center; ">
-        <h1>Calculation Result</h1><br>
+    <div>
+        <h1 style="color: darkblue"><strong><u>Calculation Result</u></strong></h1><br>
         <table id="results">
             <tr>
-                <th>Value 1</th>
-                <th>Value 2</th>
-                <th>Operation</th>
-                <th>Result</th>
+                <th scope="row"><u>Value1</u></th>
+                <td>{{ value1 }}</td>
             </tr>
             <tr>
-                <td >{{ value1 }}</td>
+                <th scope="row"><u>Value2</u></th>
                 <td>{{ value2 }}</td>
+            </tr>
+            <tr>
+                <th scope="row"><u>Operation </u></th>
                 <td>{{ operation }}</td>
+            </tr>
+             <tr>
+                <th scope="row"><u>Result </u></th>
                 <td>{{ result }}</td>
             </tr>
         </table>
