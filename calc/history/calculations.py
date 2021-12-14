@@ -9,20 +9,21 @@ import pandas as pd
 class Calculations:
     """ Calculations class manages the history of calculations"""
     history = []
+
     # pylint: disable=too-few-public-methods
 
     # method to write history to a csv file
 
-    @staticmethod
-    def read_history_from_csv():
-        """Read history from csv and put it in history"""
-        data = pd.read_csv("addition_sample.csv")
-        return Calculations.history.append(data)
+    #   @staticmethod
+    #   def read_history_from_csv():
+    #     """Read history from csv and put it in history"""
+    #     data = pd.read_csv("addition_sample.csv")
+    #     return Calculations.history.append(data)
 
-    @staticmethod
-    def write_history_to_csv(history):
-        """Write history to csv"""
-        return history.to_csv("history_csv.csv")
+    #  @staticmethod
+    #  def write_history_to_csv(history):
+    #      """Write history to csv"""
+    #     return history.to_csv("history_csv.csv")
 
     @staticmethod
     def clear_history():
@@ -57,8 +58,7 @@ class Calculations:
     @staticmethod
     def add_calculation(calculation):
         """Get a generic calculation from history"""
-        Calculations.history.append(calculation)
-        return True
+        return Calculations.history.append(calculation)
 
     @staticmethod
     def add_addition_calculation_to_history(values):
@@ -96,9 +96,9 @@ class Calculations:
 # retrieve back the history, send this to table
 # convert data frame into correct format to be printed
 # table data in a dictionary , method on history that returns back a dictionary
-    @staticmethod
-    def data_to_table():
-        data_dict = {}
-        for item in Calculations.history:
-            data_dict[item] = str(item)
-        return data_dict
+#   @staticmethod
+#   def data_to_table():
+#     data_dict = {}
+#     for item in Calculations.history:
+#         data_dict[item] = str(item)
+#    return data_dict
