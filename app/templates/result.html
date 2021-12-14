@@ -6,27 +6,28 @@
         #results {
             font-family: sans-serif;
             border-collapse: collapse;
-            border: 1px solid grey;
-            width: 90%;
-            height: 100px;
+            border: 2px solid cadetblue;
+            width: 50%;
             text-align: center;
-            margin-right: 40% ;
+            margin-right: auto;
+            margin-left: auto;
             margin-bottom: 5% ;
         }
 
         #results th {
-            padding-top: 10px;
+            padding-top: 25px;
             padding-bottom: 10px;
             text-align: center;
-            background-color: lightyellow;
+            background-color: lightsteelblue;
             border: 1px solid grey;
             color: black;
-            width: 30%;
+            width: 50%;
+
         }
 
         #results td{
             border: 1px solid grey;
-            padding: 20px;
+            padding: 0px;
             text-align: center;
         }
 
@@ -50,32 +51,32 @@
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for message in messages %}
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong>Good Job!</strong> Your calculation was successful.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <div style="text-align: center" class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Well done!</h4>
+                    <p>You successfully calculated! </p>
+                    <hr>
+                    <p class="mb-0">Good Job!</p>
                 </div>
             {% endfor %}
         {% endif %}
     {% endwith %}
     <div>
-        <h1 style="color: darkblue"><strong><u>Calculation Result</u></strong></h1><br>
+        <h1 style="color: darkblue; text-align: center"><strong><i>Your Calculation Result : </i></strong></h1><br>
         <table id="results">
             <tr>
-                <th scope="row"><u>Value1</u></th>
+                <th scope="row">VALUE 1</th>
                 <td>{{ value1 }}</td>
             </tr>
             <tr>
-                <th scope="row"><u>Value2</u></th>
+                <th scope="row">VALUE 2</th>
                 <td>{{ value2 }}</td>
             </tr>
             <tr>
-                <th scope="row"><u>Operation </u></th>
+                <th scope="row">OPERATION </th>
                 <td>{{ operation }}</td>
             </tr>
              <tr>
-                <th scope="row"><u>Result </u></th>
+                <th scope="row">RESULT </th>
                 <td>{{ result }}</td>
             </tr>
         </table>

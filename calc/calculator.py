@@ -14,7 +14,7 @@ class Calculator:
         return Calculations.get_last_calculation_result_value()
 
     @staticmethod
-    # tuple allows me to pass in as many values as a I want
+    # tuple allows me to pass in as many values as I want
     def addition(tuple_values: tuple):
         """ adds list of numbers"""
         Calculations.add_addition_calculation_to_history(tuple_values)
