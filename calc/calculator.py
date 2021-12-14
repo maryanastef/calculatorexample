@@ -1,5 +1,3 @@
-
-
 """ Increment Function"""
 from idlelib import history
 

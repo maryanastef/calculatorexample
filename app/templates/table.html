@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Table Demo{% endblock %}
+{% block title %}Table{% endblock %}
 {% block head %}
     {{ super() }}
     <style type="text/css">
@@ -18,7 +18,7 @@
         <table class="table table-striped table-light">
             <thead>{{ titles[loop.index] }}</thead>
             <tbody>{{ table|safe }}</tbody>
-        </table>-->
+        </table>
     {% endfor %}
 
     <table class="table table-striped">
@@ -54,9 +54,6 @@
         {% endfor %}
         </tr>
         </tbody>
-
-
-
     </table>
 
 
