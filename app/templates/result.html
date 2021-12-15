@@ -82,5 +82,20 @@
         </table>
     </div>
 
+    <h2>Calculator History </h2>
+
+    {% if data %}
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col">
+                    <p style="margin-top: 10px"> The {{ operation }} of {{ value1 }} and {{ value2 }}
+                        is {{ result }}</p>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+
+
 
 {% endblock %}

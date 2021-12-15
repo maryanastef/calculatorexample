@@ -8,67 +8,46 @@
 {% endblock %}
 {% block content %}
 
-      <h1>Calculator's History </h1>
+    <h1>Calculator's History </h1>
 
     <br>
     <br>
-     {% for table in tables %}
-        <table class="table table-striped table-light">
-            <thead>{{ titles[loop.index] }}</thead>
-            <tbody>{{ table|safe }}</tbody>
-        </table>
-     {% endfor %}
 
     <table id="data" class="table table-striped">
         <thead>
-            <tr>
-                <th>Value 1</th>
-                <th>Value 2</th>
-                <th>Operation</th>
-                <th>Result</th>
-            </tr>
         <tr>
-            {% for col in titles %}
-                <th scope="col">{{ value1 }}</th>
-            {% endfor %}
-        </tr>
-        </thead>
-
-        <thead>
-        <tr>
-            {% for col in titles %}
-                <th scope="col">{{ value2 }}</th>
-            {% endfor %}
-        </tr>
-        </thead>
-        <thead>
-        <tr>
-            {% for col in titles %}
-                <th scope="col">{{ operation }}</th>
-            {% endfor %}
-        </tr>
-        </thead>
-        <thead>
-        <tr>
-            {% for col in titles %}
-                <th scope="col">{{ result }}</th>
-            {% endfor %}
+            <th>Value 1</th>
+            <th>Value 2</th>
+            <th>Operation</th>
+            <th>Result</th>
         </tr>
         </thead>
 
         <tbody>
-       {% for row in row_data %}
-        <tr>
-            {% for col, row_ in zip(titles, row) %}
-            <th scope="row">{{row_}}</th>
-            {% endfor %}
-        </tr>
+        {% for item in CalculatorTable %}
+            <tr>
+                <td>{{ value1 }}</td>
+                <td>{{ value2 }}</td>
+                <td>{{ operation }}</td>
+                <td>{{ result }}</td>
+            </tr>
         {% endfor %}
-        </tr>
         </tbody>
     </table>
 
+{% endblock %}
 
-
-
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+            $('#data').DataTable({
+                columns: [
+                    null,
+                    {searchable: false},
+                    {orderable: false, searchable: false},
+                    {orderable: false, searchable: false},
+                    null],
+            });
+        });
+    </script>
 {% endblock %}

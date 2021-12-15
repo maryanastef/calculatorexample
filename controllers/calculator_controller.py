@@ -1,4 +1,4 @@
-from app.controllers.controller import ControllerBase
+from controllers.controller import ControllerBase
 from calc.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for
 
@@ -21,7 +21,7 @@ class CalculatorController(ControllerBase):
             # this will call on correct operation
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_last_result_value())
-      
+
             # if result == "error":
             #    flash("Error! You cannot divide by zero")
             return render_template('result.html', value1=value1, value2=value2,
