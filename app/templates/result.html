@@ -11,7 +11,7 @@
             text-align: center;
             margin-right: auto;
             margin-left: auto;
-            margin-bottom: 5% ;
+            margin-bottom: 5%;
         }
 
         #results th {
@@ -25,7 +25,7 @@
 
         }
 
-        #results td{
+        #results td {
             border: 1px solid grey;
             padding: 0px;
             text-align: center;
@@ -35,14 +35,14 @@
             background-color: #eee;
         }
 
-          #results th [scope="col"]{
-              background-color: #696969;
-              color: #fff;
-         }
+        #results th [scope="col"] {
+            background-color: #696969;
+            color: #fff;
+        }
 
-         #results th [scope="row"]{
-             background-color: #d7d9f2;
-         }
+        #results th [scope="row"] {
+            background-color: #d7d9f2;
+        }
 
     </style>
 {% endblock %}
@@ -72,13 +72,15 @@
                 <td>{{ value2 }}</td>
             </tr>
             <tr>
-                <th scope="row">OPERATION </th>
+                <th scope="row">OPERATION</th>
                 <td>{{ operation }}</td>
             </tr>
-             <tr>
-                <th scope="row">RESULT </th>
+            <tr>
+                <th scope="row">RESULT</th>
                 <td>{{ result }}</td>
             </tr>
         </table>
     </div>
+
+
 {% endblock %}

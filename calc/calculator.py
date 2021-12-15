@@ -39,16 +39,16 @@ class Calculator:
         return True
 
     @staticmethod
-    def getHistory():
+    def get_history():
         """ Get history """
         return Calculations.history
 
     @staticmethod
-    def getHistoryFromCSV():
+    def get_history_from_csv():
         """ Get history """
-        return Calculations.readHistoryFromCSV()
+        return Calculations.read_history_from_csv()
 
     @staticmethod
-    def writeHistoryToCSV():
+    def write_history_to_csv():
         """ Get history """
-        return Calculations.writeHistoryToCSV()
+        return Calculations.write_history_to_csv()

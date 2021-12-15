@@ -32,23 +32,23 @@ def table():
 
 @app.route("/article1")
 def article1():
-    """returns table"""
+    """returns article1"""
     return render_template("article1.html")
 
 
 @app.route("/article2")
 def article2():
-    """returns table"""
+    """returns article2"""
     return render_template("article2.html")
 
 
 @app.route("/article3")
 def article3():
-    """returns table"""
+    """returns article3"""
     return render_template("article3.html")
 
 
 @app.route("/article4")
 def article4():
-    """returns table"""
+    """returns article4"""
     return render_template("article4.html")
