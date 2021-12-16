@@ -3,13 +3,23 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important { color: #336699; }
+        .important {
+            color: #336699;
+            text-align: center;
+        }
+
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Welcome to my calculator!</h1>
-    <p class="important">
-      Here you can add, subtract, multiply and divide numbers.
-        <img style="width: 40%" src="{{ url_for('static', filename='images/brain.jpg') }}">
-    </p>
+    <h1 style="text-align: center">Welcome to my calculator!</h1>
+    <div style="text-align: center" class="heroimg">
+        <img style="width: 400px; " src="{{ url_for('static', filename='images/heroimg.jpg') }}">
+    </div>
+
+    <div>
+        <p style="padding-top: 40px" class="important">
+            Here you can add, subtract, multiply and divide numbers.
+        </p>
+    </div>
+
 {% endblock %}

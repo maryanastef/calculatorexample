@@ -86,14 +86,3 @@ class Calculations:
         """Add a division object to history using factory method create"""
         Calculations.add_calculation(Division.create(values))
         return True
-
-    # retrieve back the history, send this to table
-    # convert data frame into correct format to be printed
-    # table data in a dictionary , method on history that returns back a dictionary
-
-#   @staticmethod
-#   def data_to_table():
-#      data_dict = {}
-#    for item in Calculations.history:
-#    data_dict[item] = str(item)
-#     return data_dict

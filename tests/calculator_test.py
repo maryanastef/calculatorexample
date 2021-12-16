@@ -11,25 +11,29 @@ def clear_history_fixture():
     Calculations.clear_history()
 
 
-def test_calculator_add(clear_history_fixture):
-    """testing the add function of the calculator"""
+# You have to add the fixture function as a parameter to the test that you want to use it with
+def test_calculator_add_static(clear_history_fixture):
+    """testing that our calculator has a static method for addition"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.add_numbers((1, 2, 3)) == 6
+    # using Tuple instead of args because we can pack as much data as we need into the tuple
+    my_tuple = (1.0, 2.0, 5.0)
+    Calculator.addition(my_tuple)
+    assert Calculator.get_last_result_value() == 8.0
 
 
-def test_calculator_subtract(clear_history_fixture):
-    """Testing the subtract function of the calculator"""
+def test_calculator_subtract_static(clear_history_fixture):
+    """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculator.subtract_numbers((20, 4, 9)) == 7
+    # using Tuple instead of args because we can pack as much data as we need into the tuple
+    my_tuple = (1.0, 2.0, 3.0)
+    Calculator.subtraction(my_tuple)
+    assert Calculator.get_last_result_value() == -6.0
 
 
 def test_calculator_multiply_static(clear_history_fixture):
-    """Testing the multiplication function of the calc"""
+    """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculator.multiply_numbers((4, 7, 1)) == 28
-
-
-def test_calculator_divide_static(clear_history_fixture):
-    """ Testing the division function of the calc"""
-    # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculator.divide_numbers((20, 4, 0)) == "Cannot divide by zero"
+    # using Tuple instead of args because we can pack as much data as we need into the tuple
+    my_tuple = (1.0, 2.0, 3.0)
+    Calculator.multiplication(my_tuple)
+    assert Calculator.get_last_result_value() == 6.0

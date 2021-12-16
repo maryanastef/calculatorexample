@@ -35,13 +35,13 @@ def test_get_calc_last_result_value(clear_history_fixture, setup_calc_fixture):
 def test_history_count(clear_history_fixture, setup_calc_fixture):
     """Testing getting the count of calculations from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.history_count() == 2
+    assert Calculations.count_history() == 2
 
 
 def test_get_history(clear_history_fixture, setup_calc_fixture):
     """This should be a list of values from the history"""
-    assert Calculations.history_count() == 2
-    history_list = Calculations.get_calc_result_history()
+    assert Calculations.count_history() == 2
+    history_list = Calculations.get_last_calculation_object()
     assert len(history_list) == 2
     assert history_list[0] == 30
     assert history_list[-1] == 3

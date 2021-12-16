@@ -1,8 +1,7 @@
-""" This is the increment function"""
+""" Calculator"""
 from calc.history.calculations import Calculations
 
 
-# the calculator class just contains the methods to calculate
 class Calculator:
     """ This is the Calculator class"""
 
@@ -45,10 +44,10 @@ class Calculator:
 
     @staticmethod
     def get_history_from_csv():
-        """ Get history """
+        """ Get history from csv"""
         return Calculations.read_history_from_csv()
 
     @staticmethod
     def write_history_to_csv():
-        """ Get history """
+        """ Write history """
         return Calculations.write_history_to_csv()

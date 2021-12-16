@@ -1,7 +1,10 @@
+import os
+
 import pandas
 import pandas as pd
-from csv_reader.write import Write
-from csv_reader.read import Read
+
+from csvreader.read import Read
+from csvreader.write import Write
 
 
 def write_csv_test():
