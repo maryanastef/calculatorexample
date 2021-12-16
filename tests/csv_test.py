@@ -10,7 +10,7 @@ from csvreader.write import Write
 def write_csv_test():
     """Testing the write method"""
     # arrange
-    filename = "addition_sample.csv"
+    filename = "data_csv.csv"
     path = "tests/test_data"
     full_path = path + "/" + filename
     dictionary = {

@@ -37,3 +37,8 @@ def test_calculator_multiply_static(clear_history_fixture):
     my_tuple = (1.0, 2.0, 3.0)
     Calculator.multiplication(my_tuple)
     assert Calculator.get_last_result_value() == 6.0
+
+def test_calculator_divide_static(clear_history_fixture):
+    """ Testing the division function of the calc"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    assert Calculator.divide_numbers((20, 4, 0)) == "Cannot divide by zero"
